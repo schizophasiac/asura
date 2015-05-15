@@ -1,0 +1,19 @@
+<phpunit bootstrap="test-bootstrap.php" colors="true" verbose="true">
+    <testsuites>
+        <testsuite name="Asura Framework Test Suite">
+            <directory>asura</directory>
+            <directory suffix="Test.php">test</directory>
+        </testsuite>
+    </testsuites>
+    <php>
+        <includePath>../src</includePath>
+    </php>
+    <logging>
+        <log type="coverage-html" target="build/html-coverage" charset="UTF-8" highlight="true" />
+    </logging>
+    <filter>
+        <whitelist processUncoveredFilesFromWhiteList="true">
+            <directory suffic=".php">src</directory>
+        </whitelist>
+    </filter>
+</phpunit>
