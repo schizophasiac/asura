@@ -24,9 +24,9 @@ class View
      * Constructor class, Most commonly a view will be passed in for immediate loading.
      * @param String $view - Name of the view to be used
      */
-    public function __construct($view = null)
+    public function __construct($view = null, $rootDir = null)
     {
-        $this->rootPath = SiteConfig::$rootDirectory;
+        $this->rootPath = (isset($rootDir) ? $rootDir : __DIR__.'/../..');
         if($view) {
             $this->Load($view);
         }
@@ -52,10 +52,11 @@ class View
         return $this;
     }
 
+
     public function Parse() 
     {
         if(!$this->view) {
-            throw new Exception('Cannot parse a template before it has been set!');
+            throw new \Exception('Cannot parse a template before it has been set!');
         } else {
             ob_start();
             require($this->rootPath.DIRECTORY_SEPARATOR.$this->viewFolder.DIRECTORY_SEPARATOR.$this->view);

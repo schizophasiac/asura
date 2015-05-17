@@ -136,12 +136,13 @@ class MasterPage
     }
 
 
-    public function PrintPage()
+    public function PrintPage($viewFile)
     {
-        $view = new View('master_page.php');
+        $view = new View($viewFile);
         return $view 
             -> Set('description', $this->description)
             -> Set('title',       $this->title)
+            -> Set('subtitle',    $this->GetSubtitle())
             -> Set('stylesheets', $this->stylesheets)
             -> Set('javascripts', $this->javascripts)
             -> Set('siteUrl',     $this->siteUrl)

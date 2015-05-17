@@ -1,0 +1,10 @@
+<?=$this->description?>
+<?=$this->title?>
+<?=$this->stylesheets?>
+<?=$this->javascripts?>
+<?=$this->siteUrl?>
+<?=$this->pageTitle?>
+<?=$this->messages?>
+<?=$this->content?>
+<?=$this->siteInfo?>
+<?=$this->mainMenu?>

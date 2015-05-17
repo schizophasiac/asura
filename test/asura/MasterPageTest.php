@@ -103,6 +103,12 @@ class MasterPageTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($file[0], $jsfile, 'The JavaScript file should equal: '.$jsfile);
     }
 
-    //TODO: Implement testPrintPage();
+    public function testPrintPage()
+    {
+        $html = $this->masterPage->PrintPage('master_page_test.php');
+        $expected = $this->testDescription.$this->testTitle.$this->testSiteUrl.
+            $this->testPageTitle.$this->testSiteInfo;
+        $this->assertEquals($html, $expected, 'The MasterPage did not render as expected');
+    }
 }
 

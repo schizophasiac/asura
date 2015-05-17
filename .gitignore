@@ -2,3 +2,4 @@
 /vendor
 .env
 .php.tags
+test/build/html-coverage

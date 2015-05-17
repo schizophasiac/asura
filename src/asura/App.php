@@ -23,6 +23,6 @@ class App
             SiteConfig::$rootUrl
         );
 
-        print $master->PrintPage();
+        print $master->PrintPage('master_page.php');
     }
 }
