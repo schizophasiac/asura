@@ -1,6 +1,6 @@
 <?php
 use asura\View;
-use config\SiteConfig;
+
 class ViewTest extends PHPUnit_Framework_TestCase
 {
     private $view;

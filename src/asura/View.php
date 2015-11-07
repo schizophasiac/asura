@@ -1,7 +1,6 @@
 <?php
 namespace asura;
 
-use config\SiteConfig;
 class View
 {
     /**
